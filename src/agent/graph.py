@@ -248,7 +248,7 @@ subgraph.add_edge(START, 'encode_file')
 subgraph.add_edge('encode_file', 'analyze_document')
 subgraph.add_edge('analyze_document', 'review_quality')
 subgraph.add_edge('review_quality', 'human_feedback')
-subgraph.add_edge('human_feedback', END)
+#subgraph.add_edge('human_feedback', END) - not required, human on the loop command
 
 # Compilar el subgrafo
 compiled_subgraph = subgraph.compile()

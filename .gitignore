@@ -1,3 +1,15 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment variables
+.env
+
 # Python
 __pycache__/
 *.py[cod]
@@ -25,8 +37,12 @@ venv/
 ENV/
 env/
 
-# Environment variables
-.env
+# Project specific
+*.pckl
+*.vectors.p*
+*.cpython-*
+store.*
+.langgraph_api/
 
 # IDE
 .idea/
@@ -34,14 +50,8 @@ env/
 *.swp
 *.swo
 
-# OS
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# Logs
+*.log
 
-# LangGraph
-.langgraph_api/
+# Local development
+.local/

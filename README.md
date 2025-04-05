@@ -1,77 +1,57 @@
 # Entity Identifier
 
-Un proyecto que utiliza LangGraph para procesar y analizar documentos, identificando entidades, individuos y detalles relevantes.
+A Python-based project for identifying and processing trade finance entities using advanced language models and graph-based processing.
 
-## Características
+## Project Structure
 
-- Procesamiento de documentos PDF e imágenes
-- Identificación de entidades y partes intervinientes
-- Análisis de detalles de carga y envío
-- Sistema de retroalimentación humana
-- Procesamiento paralelo de información
+```
+.
+├── src/               # Source code directory
+├── notebooks/         # Jupyter notebooks for analysis and testing
+├── bol/              # Bill of Lading related components
+├── .langgraph_api/   # LangGraph API configurations
+├── requirements.txt   # Python dependencies
+├── pyproject.toml    # Project configuration and metadata
+├── graph_2.py        # Graph processing implementation v2
+└── graph_3.py        # Graph processing implementation v3
+```
 
-## Requisitos
+## Setup
 
-- Python >= 3.9
-- Dependencias listadas en requirements.txt
-
-## Instalación
-
+1. Create and activate a virtual environment:
 ```bash
-# Clonar el repositorio
-git clone https://github.com/cvmilo0/entity_identifier.git
-cd entity_identifier
-
-# Crear y activar entorno virtual
 python -m venv venv
-source venv/bin/activate  # En Windows: .\venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-# Instalar dependencias
+2. Install dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
-## Configuración
+3. Configure environment variables:
+Create a `.env` file with necessary API keys and configurations.
 
-Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
+## Features
 
-```env
-DEEPSEEK_API_KEY=tu_api_key
-OPENROUTER_API_KEY=tu_api_key
-```
+- Entity identification and extraction from trade finance documents
+- Graph-based processing for entity relationships
+- Integration with language models for advanced text analysis
+- Bill of Lading (BOL) document processing
+- Jupyter notebooks for interactive analysis
 
-## Uso
+## Development
 
-El proyecto utiliza LangGraph para crear un flujo de trabajo que procesa documentos y extrae información relevante.
+The project uses:
+- Python for core implementation
+- LangGraph for graph-based processing
+- Environment variables for configuration
+- Jupyter notebooks for analysis and testing
 
-```python
-from src.agent.graph import workflow
+## License
 
-# Compilar el workflow
-graph = workflow.compile()
+[License information to be added]
 
-# Ejecutar el workflow con un documento
-result = graph.invoke({
-    "file_path": "ruta/al/documento.pdf",
-    "extraction_schema": schema_dict
-})
-```
+## Contributing
 
-## Estructura del Proyecto
-
-```
-entity_identifier/
-├── src/
-│   └── agent/
-│       ├── __init__.py
-│       ├── graph.py      # Definición del workflow
-│       ├── state.py      # Estados y tipos
-│       ├── prompts.py    # Prompts para LLMs
-│       └── utils.py      # Funciones auxiliares
-├── requirements.txt
-├── pyproject.toml
-└── README.md
-```
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT.
+[Contribution guidelines to be added] 
