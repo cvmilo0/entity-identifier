@@ -1,0 +1,30 @@
+# macOS system files
+.DS_Store
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# Project specific
+*.pckl
+*.vectors.p*
+*.cpython-*
+store.*
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Local development
+.local/ 
