@@ -1,0 +1,15 @@
+langgraph>=0.2.52
+langsmith>=0.1.147
+langchain-community>=0.3.8
+tavily-python>=0.5.0
+langchain_anthropic>=0.3.0
+langchain-core==0.3.43
+chromadb==0.4.18
+langchain-chroma>=0.2.2
+pypdf>=4.0.0
+faiss-cpu>=1.7.0
+pdf2image==1.16.3
+
+[dev]
+mypy>=1.11.1
+ruff>=0.6.1
